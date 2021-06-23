@@ -1,0 +1,14 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean: ['~']
+
+- link:
+    # append source ~/*
+    ~/.bashrc_local: bashrc
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - [./sourceror.sh, Appending `source ~/*` for exisiting files]
