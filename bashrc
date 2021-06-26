@@ -14,7 +14,7 @@ source ~/.local/bin/virtualenvwrapper.sh
 export code_path='/mnt/Data/peiying'
 export git_path="$code_path/Github/myrepo"
 export dot_path="$git_path/public/dotfiles"
-export Pytorch_Template="$git_path/public/Pytorch-Template"
+export pytorch_template="$git_path/public/pytorch-template"
 export NTUH_path="$git_path/private/NTUH/"
 export DLCV_path='/mnt/Data/peiying/Courses/DLCV/HW'
 ### torch
