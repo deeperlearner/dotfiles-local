@@ -6,9 +6,9 @@
 - clean: ['~']
 
 - link:
-    # append source ~/*
-    ~/.bashrc_local: bashrc
+    # append
+    ~/.bashrc.d/.bashrc_local: bashrc
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-  - [./sourceror.sh, Appending `source ~/*` for exisiting files]
+  - [./sourceror.sh, Appending sourcer on exisiting files]

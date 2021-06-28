@@ -1,15 +1,19 @@
 #!/bin/bash
 
-for FILE in .bashrc
-do
+Append () {
     if [ -e "$HOME/$FILE" ]; then
-        if grep -q "^source ~/${FILE}_local" "$HOME/$FILE"; then
-            echo 'Source has already been added.'
+        if grep -q "$1" "$HOME/$FILE"; then
+            echo "Append done."
         else
-            echo -en "\nsource ~/${FILE}_local" >> "$HOME/$FILE"
+            echo -en "\n$1" >> "$HOME/$FILE"
         fi
     else
         echo "File $HOME/$FILE does not exist. Create a new one."
-        echo -en "\nsource ~/${FILE}_local" >> "$HOME/$FILE"
+        echo -en "\n$1" >> "$HOME/$FILE"
     fi
+}
+
+for FILE in .bashrc
+do
+    Append "source ~/${FILE}.d/${FILE}_local"
 done
