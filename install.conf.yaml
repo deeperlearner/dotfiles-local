@@ -8,6 +8,8 @@
 - link:
     # append
     ~/.bashrc.d/.bashrc_local: bashrc
+    ~/.rsync-incremental-backup/include.txt: rsync/include.txt
+    ~/.rsync-incremental-backup/exclude.txt: rsync/exclude.txt
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

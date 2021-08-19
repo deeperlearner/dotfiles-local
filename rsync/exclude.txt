@@ -1,0 +1,3 @@
+.tmp.drivedownload/
+__pycache__/
+desktop.ini
